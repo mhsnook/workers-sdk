@@ -72,6 +72,7 @@ export const configPlugin = createPlugin("config", (ctx) => {
 						ctx.getTunnelHostnames(),
 						userConfig.server?.allowedHosts
 					),
+					watch: { ignored: ["**/.wrangler/**"] },
 					fs: {
 						deny: [
 							...defaultDeniedFiles,
